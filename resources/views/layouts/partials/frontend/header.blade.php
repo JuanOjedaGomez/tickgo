@@ -3,7 +3,7 @@
     <nav class="navbar navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <a href="/" class="navbar-brand">{!! config('adminlte.logo_lg') !!}</a>
+                <a href="/" class="navbar-brand">TickGo{!! config('adminlte.logo_lg') !!}</a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                   <i class="fa fa-bars"></i>
                 </button>
@@ -22,10 +22,10 @@
                 <ul class="nav navbar-nav">
                     @guest
                         @if (Route::has('login'))
-                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('login') }}">Ingresar</a></li>
                         @endif
                         @if (Route::has('register'))
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('register') }}">Registrarse</a></li>
                         @endif
                     @else
                         @if (Route::has('impersonate.stop') && Auth::user()->can('stopImpersonate', \App\User::class))
