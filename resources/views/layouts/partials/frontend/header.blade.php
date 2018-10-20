@@ -9,14 +9,14 @@
                 </button>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Collect the nav links, forms, and other content for toggling-->
             <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Mis Eventos</a></li>
                     <li><a href="/">Mis Tickets</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+            <!--/.navbar-collapse -->
 
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
