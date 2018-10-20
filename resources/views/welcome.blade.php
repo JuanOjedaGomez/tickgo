@@ -1,10 +1,10 @@
 @extends('layouts.frontend')
 
 {{-- Page Title --}}
-@section('page-title', 'Welcome')
+@section('page-title', 'Bienvenido')
 
 {{-- Page Subtitle --}}
-@section('page-subtitle', '')
+@section('page-subtitle', 'TickGo')
 
 {{-- Breadcrumbs --}}
 @section('breadcrumbs')
