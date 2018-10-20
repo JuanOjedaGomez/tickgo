@@ -3,7 +3,7 @@
     <nav class="navbar navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <a href="/" class="navbar-brand">TickGo{!! config('adminlte.logo_lg') !!}</a>
+                <a href="/" class="navbar-brand">{!! config('adminlte.logo_lg') !!}</a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                   <i class="fa fa-bars"></i>
                 </button>
@@ -12,7 +12,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Link</a></li>
+                    <li><a href="/">Mis Eventos</a></li>
+                    <li><a href="/">Mis Tickets</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
