@@ -49,7 +49,7 @@
     </head>
 
     <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-    <body class="hold-transition {{ config('adminlte.theme') }} layout-top-nav">
+    <body class="hold-transition {{ config('adminlte.theme') }} layout-boxed layout-top-nav">
         <!-- Site wrapper -->
         <div class="wrapper">
 

@@ -52,7 +52,7 @@
         @yield('head-extras')
     </head>
 
-    <body class="hold-transition {{ config('adminlte.theme') }} sidebar-mini">
+    <body class="hold-transition {{ config('adminlte.theme') }} sidebar-mini layout-boxed">
         @auth
             <script type="text/javascript">
                 /* Recover sidebar state */
