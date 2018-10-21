@@ -46,18 +46,18 @@ $_printLink = false;
 
                         <div class="box-tools">
                             <a href="{{ $_listLink }}" class="btn btn-sm btn-primary margin-r-5 margin-l-5">
-                                <i class="fa fa-search"></i> <span>List</span>
+                                <i class="fa fa-search"></i> <span>Lista</span>
                             </a>
                             <a href="{{ $_createLink }}" class="btn btn-sm btn-primary margin-r-5 margin-l-5">
-                                <i class="fa fa-plus"></i> <span>Add</span>
+                                <i class="fa fa-plus"></i> <span>Agregar</span>
                             </a>
                             @if ($_printLink)
                                 <a href="{{ $_printLink }}" target="_blank" class="btn btn-sm btn-default margin-r-5 margin-l-5">
-                                    <i class="fa fa-print"></i> <span>Print</span>
+                                    <i class="fa fa-print"></i> <span>Imprimir</span>
                                 </a>
                             @endif
                             <button class="btn btn-sm btn-info margin-r-5 margin-l-5">
-                                <i class="fa fa-save"></i> <span>Save</span>
+                                <i class="fa fa-save"></i> <span>Guardar</span>
                             </button>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ $_printLink = false;
                         <div class="col-xs-6">
                             <div class="text-center margin-b-5 margin-t-5">
                                 <button class="btn btn-info">
-                                    <i class="fa fa-save"></i> <span>Save</span>
+                                    <i class="fa fa-save"></i> <span>Guardar</span>
                                 </button>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ $_printLink = false;
                         <div class="col-xs-6">
                             <div class="text-center margin-b-5 margin-t-5">
                                 <a href="{{ $_listLink }}" class="btn btn-default">
-                                    <i class="fa fa-ban"></i> <span>Cancel</span>
+                                    <i class="fa fa-ban"></i> <span>Cancelar</span>
                                 </a>
                             </div>
                         </div>

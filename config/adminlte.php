@@ -83,5 +83,5 @@ return [
     |
     */
 
-    'theme' => 'skin-purple',
+    'theme' => 'skin-black-light',
 ];
