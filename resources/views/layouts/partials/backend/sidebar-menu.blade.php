@@ -27,7 +27,7 @@
         </li>
         <li class="{{ \App\Utils::checkRoute(['admin::users.index', 'admin::users.create']) ? 'active': '' }}">
             <a href="{{ route('admin::users.index') }}">
-                <i class="fa fa-calendar"></i> <span>Mis Eventos</span>
+                <i class="fa fa-calendar"></i> <span>Craer Eventos</span>
             </a>
         </li>
         </li>
