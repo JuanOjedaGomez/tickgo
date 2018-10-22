@@ -23,6 +23,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 /* Layout */
 .wrapper {
   height: 100%;
@@ -4933,6 +4934,7 @@ table.text-center th {
 .chart canvas {
   width: 100% !important;
 }
+
 /*
  * Misc: print
  * -----------
