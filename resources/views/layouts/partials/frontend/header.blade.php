@@ -21,7 +21,7 @@
 
             <form class="navbar-form navbar-left" role="search" action="{{url('home/searchredirect')}}">
                 <div class="form-group">
-                    <input type="text" class="form-control" name='search' placeholder="Buscar Evento..." size="90%"/>
+                    <input type="text" class="form-control" name='search' placeholder="Buscar Evento..." size="85%"/>
                 </div>
                 <button type="search" class="btn btn-primary"><i class="fa fa-search"></i></button>
             </form>
