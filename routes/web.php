@@ -95,10 +95,11 @@ Route::group(['middleware' => 'auth'], function () {
         });
     });
 
-    Route::get('/nuevoEvento', function () {
-        return view('evento/nuevoEvento');
-    });
+    Route::get('evento/nuevo', 'Evento\EventoController@create') ->name('evento.create');
 
-    Route::resource('evento', 'EventoController');
+   // Route::resource('evento', 'Evento\EventoController');
 
+   // Route::get('/nuevoEvento', function () {
+       // return view('evento/nuevoEvento');
+   // });
 });

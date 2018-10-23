@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Evento;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Evento;
 
 class EventoController extends Controller
@@ -25,7 +26,7 @@ class EventoController extends Controller
     public function create()
     {
         // Redireccionar a una vista
-        return view(nuevoEvento);
+        return view('evento/nuevoEvento');
     }
 
     /**

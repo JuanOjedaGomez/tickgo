@@ -25,14 +25,14 @@
         </li>
     @endif
         </li>
-        <li class="{{ \App\Utils::checkRoute(['admin::users.index', 'admin::users.create']) ? 'active': '' }}">
-            <a href="{{ route('admin::users.index') }}">
+        <li>
+            <a href="{{ route('evento.create') }}">
                 <i class="fa fa-calendar"></i> <span>Craer Eventos</span>
             </a>
         </li>
         </li>
         <li class="{{ \App\Utils::checkRoute(['admin::users.index', 'admin::users.create']) ? 'active': '' }}">
-            <a href="{{ route('admin::users.index') }}">
+            <a href="{{ route('evento.create') }}">
                 <i class="fa fa-ticket"></i> <span>Mis Ticket</span>
             </a>
         </li>
