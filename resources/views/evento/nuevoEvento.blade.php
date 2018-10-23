@@ -7,10 +7,10 @@
 @endsection
 
 {{-- Page Title --}}
-@section('page-title', 'Dashboard')
+@section('page-title', 'Nuevo Evento')
 
 {{-- Page Subtitle --}}
-@section('page-subtitle', 'it all starts here')
+@section('page-subtitle', 'Crea tu nuevo evento')
 
 {{-- Header Extras to be Included --}}
 @section('head-extras')
@@ -24,36 +24,36 @@
         <div class="col-md-9">
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#settings" data-toggle="tab">Nuevo Evento</a></li>
+                    <li class="active"><a href="#settings" data-toggle="tab">Datos Evento</a></li>
+                    <li class=""><a href="#artista" data-toggle="tab">Datos Artista</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="active tab-pane" id="settings">
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('dashboard::profile.update') }}">
                             {!! csrf_field() !!}
 
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="inputName" class="col-sm-2 control-label">Nombre</label>
-
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Fecha de inicio</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputName" placeholder="Name" value="{{ old('name', Auth::user()->name) }}" name="name">
-
-                                    @if ($errors->has('name'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('name') }}</strong>
-                                        </span>
-                                    @endif
+                                    <input class="date form-control" type="text">
                                 </div>
+                                <script type="text/javascript">
+                                    $('.date').datepicker({
+                                        format: 'mm-dd-yyyy'
+                                    });
+                                </script>
                             </div>
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Fecha de termino</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="{{ old('email', Auth::user()->email) }}" name="email">
+                                    <input class="date form-control" type="text">
                                 </div>
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                                <script type="text/javascript">
+                                    $('.date').datepicker({
+                                        format: 'mm-dd-yyyy'
+                                    });
+                                </script>
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
@@ -84,28 +84,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="logo_number" class="col-sm-2 control-label">Logo</label>
-                                <div class="col-sm-10">
-                                    <div class="box box-info">
-                                        <div class="box-body no-padding">
-                                            <ul class="logo-number users-list clearfix">
-                                                @foreach (\App\Utils::getLogosNumber() as $logoNumber)
-                                                    <li>
-                                                        <img class="profile-user-img img-responsive img-circle" src="{{ \App\Utils::logoPath($logoNumber) }}" alt="Profile picture {{ $logoNumber }}">
-                                                        <span class="users-list-date">
-                                                        <input type="radio" name="logo_number" value="{{ $logoNumber }}" {{ old('logo_number', Auth::user()->logo_number) == $logoNumber ? 'checked' : '' }}>
-                                                    </span>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                                    <button type="submit" class="btn btn-primary">Crear</button>
                                 </div>
                             </div>
                         </form>
