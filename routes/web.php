@@ -95,6 +95,8 @@ Route::group(['middleware' => 'auth'], function () {
         });
     });
 
-    Route::resource('evento', 'EventoController');
+    Route::get('/crearEvento', function () {
+        return view('/evento/nuevoEvento');
+    });
 
 });
