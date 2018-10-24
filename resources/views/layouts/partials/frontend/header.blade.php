@@ -12,8 +12,9 @@
             <!-- Collect the nav links, forms, and other content for toggling-->
             <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Mis Eventos</a></li>
-                    <li><a href="/">Mis Tickets</a></li>
+                    <li><img src="adminlte/img/carrusel/carrusel_logo.png" alt="..."></li>
+                    <!--<li><a href="/">Mis Eventos</a></li>
+                    <li><a href="/">Mis Tickets</a></li>-->
                 </ul>
             </div>
 
@@ -46,7 +47,7 @@
                         @endif
 
                         @if (Route::has('dashboard::index'))
-                            <li><a href="{{ route('dashboard::index') }}"><i class="fa fa-dashboard"></i></a></li>
+                            <li><a href="{{ route('dashboard::index') }}"><i class="fa fa-user-circle-o"></i></a></li>
                         @endif
                         <!-- User Account -->
                         <li class="dropdown user user-menu">

@@ -7,10 +7,10 @@
 @endsection
 
 {{-- Page Title --}}
-@section('page-title', 'Dashboard')
+@section('page-title', 'Menu')
 
 {{-- Page Subtitle --}}
-@section('page-subtitle', 'it all starts here')
+@section('page-subtitle', 'Bienvenido a tu sesion')
 
 {{-- Header Extras to be Included --}}
 @section('head-extras')

@@ -129,6 +129,12 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <div class="col-sm-offset-10 col-sm-10">
+                                    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                                </div>
+                            </div>
+
                             <div class="table-responsive list-records">
                                 <table class="table table-hover table-bordered">
                                     <thead>
@@ -141,7 +147,7 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
+                                <div class="col-sm-offset-10 col-sm-10">
                                     <button type="submit" class="btn btn-primary">Crear</button>
                                 </div>
                             </div>
