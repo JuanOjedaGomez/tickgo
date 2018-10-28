@@ -42,8 +42,8 @@ return [
     | Menu Logos
     |--------------------------------------------------------------------------
     */
-    'logo_lg'   => '<b>Tick</b>GO',
-    'logo_mini' => '<b>T</b>GO',
+    'logo_lg'   => '<img src="adminlte/img/logo_2.png" alt="logo">',
+    'logo_mini' => '<img src="adminlte/img/isotipo_4.png" alt="isotipo">',
 
     /*
     |--------------------------------------------------------------------------

@@ -96,6 +96,5 @@
         <!-- /.form-group -->
     </div>
     <!-- /.col-xs-12 -->
-
 </div>
 <!-- /.col-md-5 -->

@@ -95,11 +95,24 @@ Route::group(['middleware' => 'auth'], function () {
         });
     });
 
+    /**
+     * EventoController.
+     * // Ruta para nuevo evento en funcion create.*"
+     */
+
     Route::get('evento/nuevo', 'Evento\EventoController@create') ->name('evento.create');
 
-   // Route::resource('evento', 'Evento\EventoController');
+    /**
+     * EventoController.
+     * // Ruta para mia evento en funcion misEventos.*"
+     */
 
-   // Route::get('/nuevoEvento', function () {
-       // return view('evento/nuevoEvento');
-   // });
+    Route::get('evento/miseventos', 'Evento\EventoController@misEventos') ->name('evento.mis_evntos');
+
+    /**
+     * TicketController.
+     * // Ruta para mis tikets en funcion misTickets.*"
+     */
+
+    Route::get('ticket/misticket', 'Ticket\TicketController@misTickets') ->name('ticket.mis_ticket');
 });

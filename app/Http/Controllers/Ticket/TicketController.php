@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Evento;
+namespace App\Http\Controllers\Ticket;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Evento;
+use App\Ticket;
 
-class EventoController extends Controller
+class TicketController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,18 +23,17 @@ class EventoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function misTickets()
+    {
+        // Redireccionar a una vista
+        return view('ticket/misTickets');
+    }
+
     public function create()
     {
-        // Redireccionar a una vista
-        return view('evento/nuevoEvento');
+        //
     }
-
-    public function misEventos()
-    {
-        // Redireccionar a una vista
-        return view('evento/misEventos');
-    }
-
 
     /**
      * Store a newly created resource in storage.
