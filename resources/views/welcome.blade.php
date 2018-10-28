@@ -8,7 +8,7 @@
 
 {{-- Breadcrumbs --}}
 @section('breadcrumbs')
-    
+
 @endsection
 
 @section('content')

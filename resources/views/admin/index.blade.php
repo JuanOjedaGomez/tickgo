@@ -2,10 +2,10 @@
 @extends('layouts.backend')
 
 {{-- Page Title --}}
-@section('page-title', 'Admin')
+@section('page-title', 'Administrador')
 
 {{-- Page Subtitle --}}
-@section('page-subtitle', 'Control panel')
+@section('page-subtitle', 'Panel de Control')
 
 {{-- Breadcrumbs --}}
 @section('breadcrumbs')
