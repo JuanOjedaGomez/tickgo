@@ -10,7 +10,7 @@
                 </a>
             </div>
             <div class="pull-left info">
-                <p><a href="{{ route('dashboard::profile') }}">{{ Auth::user()->name }}</a></p>
+                <p><a href="{{ route('dashboard::profile') }}" style="color:black;">{{ Auth::user()->name }}</a></p>
                 <a href="{{ route('dashboard::profile') }}"><i class="fa fa-circle text-success"></i>Conectado</a>
             </div>
         </div>
