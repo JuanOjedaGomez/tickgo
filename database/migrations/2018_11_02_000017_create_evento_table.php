@@ -41,6 +41,7 @@ class CreateEventoTable extends Migration
             $table->index(["evento_subtipo_id"], 'fk_evento_evento_subtipo1_idx');
 
             $table->index(["organizador_id"], 'fk_evento_organizador1_idx');
+            $table->nullableTimestamps();
 
 
             $table->foreign('evento_subtipo_id', 'fk_evento_evento_subtipo1_idx')

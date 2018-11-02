@@ -34,6 +34,7 @@ class CreateTicketAutorizadosPromotorTable extends Migration
             $table->index(["promotor_evento_id"], 'fk_ticket_tipo_evento_has_promotor_evento_promotor_evento1_idx');
 
             $table->index(["ticket_tipo_evento_id"], 'fk_ticket_tipo_evento_has_promotor_evento_ticket_tipo_event_idx');
+            $table->nullableTimestamps();
 
 
             $table->foreign('ticket_tipo_evento_id', 'fk_ticket_tipo_evento_has_promotor_evento_ticket_tipo_event_idx')

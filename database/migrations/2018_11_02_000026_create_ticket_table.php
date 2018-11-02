@@ -32,6 +32,7 @@ class CreateTicketTable extends Migration
             $table->integer('is_usado')->nullable();
 
             $table->index(["ticket_tipo_evento_id"], 'fk_ticket_ticket_tipo_evento1_idx');
+            $table->nullableTimestamps();
 
 
             $table->foreign('ticket_tipo_evento_id', 'fk_ticket_ticket_tipo_evento1_idx')

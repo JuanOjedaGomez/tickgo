@@ -25,6 +25,7 @@ class CreateRegionTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nombre', 100)->nullable();
+            $table->nullableTimestamps();
         });
     }
 

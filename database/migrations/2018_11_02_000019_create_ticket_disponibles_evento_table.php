@@ -38,6 +38,7 @@ class CreateTicketDisponiblesEventoTable extends Migration
             $table->index(["evento_id"], 'fk_ticket_tipo_has_evento_evento1_idx');
 
             $table->index(["ticket_venta_id"], 'fk_ticket_tipo_has_evento_ticket_venta1_idx');
+            $table->nullableTimestamps();
 
 
             $table->foreign('ticket_tipo_id', 'fk_ticket_tipo_has_evento_ticket_tipo1_idx')
