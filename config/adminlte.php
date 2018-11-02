@@ -42,8 +42,8 @@ return [
     | Menu Logos
     |--------------------------------------------------------------------------
     */
-    'logo_lg'   => '<img src="../adminlte/img/logo_2.png" alt="logo">',
-    'logo_mini' => '<img src="../adminlte/img/isotipo_4.png" alt="isotipo">',
+    'logo_lg'   => '<img src="../adminlte/img/logo_000.png" alt="logo">',
+    'logo_mini' => '<img src="../adminlte/img/isotipo_000.png" alt="isotipo">',
 
     /*
     |--------------------------------------------------------------------------

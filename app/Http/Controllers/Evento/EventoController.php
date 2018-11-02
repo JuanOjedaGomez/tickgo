@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Evento;
 
+use App\Evento_tipo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Evento;
@@ -15,7 +16,7 @@ class EventoController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -26,7 +27,8 @@ class EventoController extends Controller
     public function create()
     {
         // Redireccionar a una vista
-        return view('evento/nuevoEvento');
+        $tipos = Evento_tipo::all();
+        return view('evento/nuevoEvento')->with('tipos',$tipos);
     }
 
     public function misEventos()
@@ -44,7 +46,21 @@ class EventoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $evento = new Evento;
+        $evento -> fecha_inicio=$request->txt_fecha_ini;
+        $evento -> fecha_final=$request->txt_fecha_ter;
+        $evento -> descripcion_corta=$request->txt_nombre;
+        $evento -> descripcion_larga=$request->txt_descripcion;
+        $evento -> imagen=$request->txt_imagen;
+        $evento -> video=$request->txt_video;
+        $evento -> save();
+
+
+
+
+
+        return redirect('evento/misEventos');
+
     }
 
     /**
