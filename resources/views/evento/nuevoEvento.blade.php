@@ -31,13 +31,13 @@
 
                 <!-- panel de evento -->
                     <div class="active tab-pane" id="settings">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ route('dashboard::profile.update') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('registrarEvento')}}">
                             {!! csrf_field() !!}
 
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Fecha de inicio</label>
                                 <div class="col-sm-10">
-                                    <input class="date form-control" type="text"  placeholder="Seleccione fecha de inicio...">
+                                    <input class="date form-control" type="text"  name="txt_fecha_ini" placeholder="Seleccione fecha de inicio...">
                                 </div>
                                 <script type="text/javascript">
                                     $('.date').datepicker({
@@ -49,7 +49,7 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Fecha de termino</label>
                                 <div class="col-sm-10">
-                                    <input class="date form-control" type="text" placeholder="Seleccione fecha de termino...">
+                                    <input class="date form-control" type="text" name="txt_fecha_ter" placeholder="Seleccione fecha de termino...">
                                 </div>
                                 <script type="text/javascript">
                                     $('.date').datepicker({
@@ -61,12 +61,10 @@
                             <div class="form-group">
                                 <label for="inputPassword" class="col-sm-2 control-label">Tipo</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>Seleccione tipo de evento...</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                    <select class="form-control" id="exampleFormControlSelect1" name="txt_tipo">
+                                        @foreach($tipos as $tipo)
+                                        <option value="{{ $tipo->id }}">{{ $tipo->nombre}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -74,35 +72,28 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Nombre</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Nombre evento...">
+                                    <input type="text" class="form-control" name="txt_nombre" placeholder="Nombre evento...">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Descripcion</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Descripcion...">
+                                    <input type="text" class="form-control" name="txt_descripcion" placeholder="Descripcion...">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Fecebook</label>
+                                <label class="col-sm-2 control-label">Video</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Facebook...">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Instagram</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Instagram...">
+                                    <input type="text" class="form-control" name="txt_video" placeholder="Video...">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Flyer</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Flyer...">
+                                    <input type="text" class="form-control" name="txt_imagen" placeholder="Flyer...">
                                 </div>
                             </div>
 
@@ -112,20 +103,20 @@
                 <!-- / panel de artista -->
 
                     <div class="tab-pane" id="artista">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ route('dashboard::profile.update') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('registrarEvento')}}">
                             {!! csrf_field() !!}
 
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Nombre</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Nombre artista...">
+                                    <input type="text" class="form-control" name="txt_nombre_art"placeholder="Nombre artista...">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Apodo</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Apodo artista...">
+                                    <input type="text" class="form-control" name="txt_apodo" placeholder="Apodo artista...">
                                 </div>
                             </div>
 

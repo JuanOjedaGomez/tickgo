@@ -101,7 +101,7 @@ Route::group(['middleware' => 'auth'], function () {
      */
 
     Route::get('evento/nuevo', 'Evento\EventoController@create') ->name('evento.create');
-
+    Route::resource('registrarEvento', 'Evento\EventoController' );
     /**
      * EventoController.
      * // Ruta para mia evento en funcion misEventos.*"
