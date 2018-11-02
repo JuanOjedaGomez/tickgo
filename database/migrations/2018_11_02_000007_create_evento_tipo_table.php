@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccesoTable extends Migration
+class CreateEventoTipoTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'acceso';
+    public $set_schema_table = 'evento_tipo';
 
     /**
      * Run the migrations.
-     * @table acceso
+     * @table evento_tipo
      *
      * @return void
      */
@@ -25,7 +25,7 @@ class CreateAccesoTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nombre', 100)->nullable();
-            $table->string('descripcion', 100)->nullable();
+            $table->nullableTimestamps();
         });
     }
 

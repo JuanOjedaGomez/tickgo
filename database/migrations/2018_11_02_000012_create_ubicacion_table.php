@@ -28,8 +28,6 @@ class CreateUbicacionTable extends Migration
             $table->integer('ciudad_id')->unsigned();
             $table->string('nombre', 100)->nullable();
             $table->string('direccion', 100)->nullable();
-            $table->string('lat', 100)->nullable();
-            $table->string('long', 100)->nullable();
 
             $table->index(["organizador_id"], 'fk_ubicacion_organizador1_idx');
 

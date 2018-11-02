@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersonaTable extends Migration
+class CreateCiudadTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'persona';
+    public $set_schema_table = 'ciudad';
 
     /**
      * Run the migrations.
-     * @table persona
+     * @table ciudad
      *
      * @return void
      */
@@ -24,11 +24,17 @@ class CreatePersonaTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->integer('region_id')->unsigned();
             $table->string('nombre', 100)->nullable();
-            $table->string('correo', 100)->nullable();
-            $table->string('user_facebook', 100)->nullable();
-            $table->string('user_instagram', 100)->nullable();
-            $table->string('foto_perfil', 100)->nullable();
+
+            $table->index(["region_id"], 'fk_ciudad_region1_idx');
+            $table->nullableTimestamps();
+
+
+            $table->foreign('region_id', 'fk_ciudad_region1_idx')
+                ->references('id')->on('region')
+                ->onDelete('no action')
+                ->onUpdate('no action');
         });
     }
 
